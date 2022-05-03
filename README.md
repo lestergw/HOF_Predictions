@@ -10,7 +10,33 @@ As I took more analytics classes at Miami University, my curiosity piqued. I wan
 
 The following report details the methods used and decisions made to best answer this question. I will identify my data source, explain how the data was cleaned, detail my modeling strategy, deliver my results, and discuss the major limitations of this analysis.
 
+## Table of Contents
+**[Problem Scope](#problem-scope)**<br>
+**[Data Source: Lahman's Baseball Database](#data-source-lahmans-baseball-database)**<br>
+**[Data Cleaning](#data-cleaning)**<br>
+**[Modeling Strategy](#modeling-strategy)**<br>
+**[Results](#results)**<br>
+**[Limitations](#limitations)**<br>
+**[Acknowledgements](#acknowledgements)**<br>
+
+## Problem Scope
+
+
+
 ## Data Source: Lahman's Baseball Database
+
+The data used in this analysis is extracted from the Lahman Baseball Database using the `Lahman` package in R (see documentation [here](https://cran.r-project.org/web/packages/Lahman/Lahman.pdf)). Although the database contains numerous tables, only the `Batting`, `Fielding`, and `HallOfFame` tables are used.
+Here is some additional information about each table used:
+
+* `Batting`: 
+  * grif
+  * g
+* `Fielding`: 
+  * g
+  * g
+* `HallOfFame`: 
+  * g
+  * g
 
 ## Data Cleaning
 
