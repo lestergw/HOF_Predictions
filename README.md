@@ -28,15 +28,14 @@ The following report details the methods used and decisions made to best answer 
 The data used in this analysis is extracted from the Lahman Baseball Database using the `Lahman` package in R (see documentation [here](https://cran.r-project.org/web/packages/Lahman/Lahman.pdf)). Although the database contains numerous tables, only the `Batting`, `Fielding`, and `HallOfFame` tables are used.
 Here is some additional information about each table used:
 
-* `Batting`: 
-  * grif
-  * g
-* `Fielding`: 
-  * g
-  * g
-* `HallOfFame`: 
-  * g
-  * g
+* `Batting`: batting statistics at the level of player by year; contains predictor variables for modeling
+  * 22 variables
+* `Fielding`: fielding statistics at the level of player by year by position; used to create a subset of only hitters
+  * 147,080 observations
+  * 18 variables
+* `HallOfFame`: hall of fame voting data at the level of player by year; contains the response variable `inducted`
+  * 4,191 observations
+  * 9 variables
 
 ## Data Cleaning
 
