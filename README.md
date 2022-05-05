@@ -21,7 +21,7 @@ The following report details the methods used and decisions made to best answer 
 
 ## Problem Scope
 
-Before diving into any numbers or code, I deemed it necessary to define the scope for this project. To maintain simplicity of understanding and feasibility of project completion, I decided to only model hitters. Similarly, of all the stats, accolades, and off-the-field factors that can influence a player's value, I decided to only use batting statistics as predictor variables. The drawbacks of such an approach are detailed in the *Limitations* section of this report.
+Before diving into any numbers or code, I deemed it necessary to define the scope for this project. To maintain simplicity of understanding and feasibility of project completion, I decided to model hitters only. Similarly, of all the stats, accolades, and off-the-field factors that can influence a player's value, I decided to only use batting statistics as predictor variables. The drawbacks of such an approach are detailed in the *[Limitations](#limitations)* section of this report.
 
 I also wanted to conceptualize how I would perform training, validation, and testing splits on the data. After considering strategies such as a rolling window modeling approach or specific subsets of data representing different eras of baseball, I ultimately decided to adopt a simple approach. My training and validation data sets would be randomly sampled from all years excluding the 5 most recent years required for MLB players to qualify for the HOF ballot: 1900-2016. The test data set would merely be the current or retired players not yet eligible for the HOF ballot in the 2017-2021 time frame.
 
@@ -31,6 +31,7 @@ The data used in this analysis is extracted from the Lahman Baseball Database us
 Here is some additional information about each table used:
 
 * `Batting`: batting statistics at the level of player by year; contains predictor variables for modeling
+  * 110,495 observations
   * 22 variables
 * `Fielding`: fielding statistics at the level of player by year by position; used to create a subset of only hitters
   * 147,080 observations
@@ -43,7 +44,27 @@ For more information about Sean Lahman or the Lahman Baseball Database, see his 
 
 ## Data Cleaning
 
+After loading the required data sets into my environment, my next goal was to clean and prepare the data in a way that aligned with my project scope. I chose to clean the data in RStudio because the data was easily accessible from the aforementioned R package `Lahman`. The data cleaning activities included:
+
+* Subsetting the data to only include players from 1900-present
+* Imputing the median for missing values in various columns
+* Aggregating the data to the player level, displaying all statistics as averages by season
+* Subsetting the data to only include players with at least 100 at-bats in the MLB
+* Merging the `inducted` indicator from the `HallOfFame` table into my aggregated data frame
+* Removing unnecessary columns
+* Recoding factor levels
+* Splitting the data into training/validation and test partitions
+  * Training/validation players from 1900-2016
+  * Test players from 2017-2021
+
+After completing these necessary activities, I saved each partition of data as a .csv file, allowing me to pivot to Google Colab for the modeling phase of the project.
+The specific steps taken to clean and export the data can be viewed in the **Data Preparation.R** file in this repository.
+
 ## Modeling Strategy
+
+Having prepared the data at the correct level of analysis, I began to model the data with Python using Google Colab. Before diving into the models, though, I had to adjust my data a little more to ensure a well-designed analysis. First, I loaded the *training.csv* file into Colab and randomly split the data into training and validation data frames using the function `train_test_split()` from `sklearn`. Next, and more importantly, I had to correct the severe imbalance of data in my response variable `inducted`. To do so, I used SMOTE oversampling on both the training and validation data frames.
+
+At this point in my analysis, I was ready to construct and fit predictive models.
 
 ## Results
 
