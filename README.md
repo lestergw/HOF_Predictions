@@ -6,6 +6,10 @@ Many kids, myself included, grew up wanting to be a professional baseball player
 
 One of the biggest events in the sport of baseball each year is the Hall of Fame voting. Stats nerds like myself love this time of year for the passionate debates that inevitably ensue. Traditionalists support players who pass the 'eye test', valuing the intangible factors that a player contributes to his team. Analytics enthusiasts use every metric possible to justify a player's inherent value, even if he or his team flew under the radar during the course of his career.
 
+<p align = "center">
+ <img src = "/Cache Files/kgj.jpg" width="850" height="566">
+</p>
+
 As I took more analytics classes at Miami University, my curiosity piqued. I wanted to pursue a project that would utilize my analytics toolkit to contribute to the heated MLB Hall of Fame conversation. After iterating through various ideas, I decided to answer the following question: *Which current MLB players will make the Hall of Fame?*
 
 The following report details the methods used and decisions made to best answer this question. I will identify my data source, explain how the data was cleaned, detail my modeling strategy, deliver my results, and discuss the major limitations of this analysis.
