@@ -139,8 +139,8 @@ final$inducted = fct_explicit_na(final$inducted, "N")
 rm(hof, merged, merged_agg)
 
 # STEP 5: Prepare training and test data sets
-train = subset(final, recent_year < 2020)
-test = subset(final, recent_year == 2020)
+train = subset(final, recent_year < 2017)
+test = subset(final, recent_year >= 2017)
 
 test = select(test, -inducted)
 
