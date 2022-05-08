@@ -124,7 +124,9 @@ The only concern that is swiftly raised about this output is the group of player
 
 ## Limitations
 
+There are a couple of key limitations of this analysis that should be considered and addressed in future iterations of this analysis. First, let's delve into the obvious ones. Only hitters were considered, leaving a large part of the story about the great pitchers of the game untold. Of those hitters, there were many metrics that were not taken into account. The biggest of these is fielding statistics. A much more comprehensive analysis would include pitchers and would factor in fielding reputations for all players.
 
+The second key limitation is that the data is biased against players who spend partial or full seasons on the injured list. 
 
 ## Discussion
 
