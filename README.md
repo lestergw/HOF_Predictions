@@ -127,6 +127,13 @@ There are a couple of key limitations of this analysis that should be considered
 
 The second key limitation is that the data is biased against players who spend partial or full seasons on the injured list. The most notable example of this is the aforementioned "Milville Meteor", Mike Trout. Although he is widely accepted as one of the best baseball players of all time, my model still failed to predict that he would be inducted into the Hall of Fame. This is most likely because his seasonal averages are skewed downward after spending considerable amounts of time on the injured list in each season from 2017-2021. A better analysis would structure the data in a way such that injured players are not at a severe disadvantage in terms of prediction.
 
+<p align = "center">
+ <img src = "/Cache Files/trout.jpg" width="400" height="366">
+</p>
+<p align = "center">
+ <em>Mike Trout, one of the most dynamic and consistent MLB sluggers, was not predicted by my model to make the Hall of Fame.</em>
+</p>
+
 The third key limitation is that the model fails to account for various unquantifiable factors that can influence a player's overall value. A perfect example of this is St. Louis Cardinals catcher Yadier Molina. Molina is regarded by many analysts as a shoe-in Hall of Famer. Although his hitting statistics are not comparable to those of catching legends Mike Piazza or Johnny Bench, much of Molina's value is attributed to his overall baseball IQ and his ability to effectively manage the pitchers he catches. Such factors are pivotal to a catcher's long-term success and chemistry with a given team, but are not accounted for by my model.
 
 The final key limitation relates to the technical steps taken in this analysis. It would be better practice to not only test more than six classification algorithms, but to also utilize cross validation to ensure that the "best model" is objectively the best by running multiple iterations of model training and testing. My methodology was more feasible for the purposes of this project, but could absolutely be expanded upon to generate more accurate results.
@@ -137,4 +144,4 @@ In future iterations of this project, all of the following limitations should be
 
 I would like to briefly thank a few people for their help and guidance with this analysis. First and foremost, thank you Sean Lahman for creating and providing the Lahman baseball database in R. My data collection and aggregation processes were made much simpler because of the `Lahman` package. Thank you also for responding to my questions and sending me in the right direction for this project!
 
-I would also like to thank Associate Professor of Information Systems and Analytics at Miami University Dr. Waldyn Martinez. You have made this project experience very enjoyable and I appreciate your constant dedication and valuable feedback as I worked through this analysis. I look forward to expanding this analysis and sharing my findings with you in the future!
+I would also like to thank Dr. Waldyn Martinez, Associate Professor of Information Systems and Analytics at Miami University. You have made this project experience very enjoyable and I appreciate your constant dedication and valuable feedback as I worked through this analysis. I look forward to expanding this analysis and sharing my findings with you in the future!
